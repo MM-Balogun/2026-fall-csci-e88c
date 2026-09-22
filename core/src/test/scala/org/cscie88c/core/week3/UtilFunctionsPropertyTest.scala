@@ -1,22 +1,31 @@
 package org.cscie88c.core.week3
 
-import org.scalatest.funsuite.AnyFunSuite
-import org.scalatest.matchers.should.Matchers
+import org.cscie88c.core.testutils.StandardTest
+import org.scalacheck.Gen
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
-import org.scalacheck._
 
 class UtilFunctionsPropertyTest
-    extends AnyFunSuite
-       with Matchers
-       with ScalaCheckPropertyChecks {
+    extends StandardTest
+    with ScalaCheckPropertyChecks {
 
-  val triplesGen: Gen[(Int, Int, Int)] =  ???
+  import UtilFunctions._
 
-  test("mult2 result test") {
-    forAll { (x: Int, y: Int) =>
-      UtilFunctions.mult2(x, y) shouldBe x * y
+  "mult2" should {
+    "satisfy the distributive property" in {
+      forAll { (a: Int, b: Int, c: Int) =>
+        assert(mult2(a, b + c) == mult2(a, b) + mult2(a, c))
+      }
     }
   }
 
-  // write more property tests below
+  "pythTest" should {
+    "remain true when x and y are swapped" in {
+      val triplesGen: Gen[(Int, Int, Int)] =
+        Gen.oneOf(pythTriplesUpto100)
+
+      forAll(triplesGen) { case (x, y, z) =>
+        assert(pythTest(y, x, z))
+      }
+    }
+  }
 }
