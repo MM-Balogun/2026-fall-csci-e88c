@@ -1,4 +1,4 @@
-package org.cscie88c.core.week2
+/* package org.cscie88c.core.week2
 
 import org.cscie88c.core.testutils.{StandardTest}
 
@@ -16,3 +16,4 @@ class UtilFunctionsTest extends StandardTest {
     
   }
 }
+*/

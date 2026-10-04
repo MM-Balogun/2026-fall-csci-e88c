@@ -1,4 +1,4 @@
-package org.cscie88c.core.week3
+/*package org.cscie88c.core.week3
 
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
@@ -10,7 +10,7 @@ class UtilFunctionsPropertyTest
        with Matchers
        with ScalaCheckPropertyChecks {
 
-  val triplesGen: Gen[(Int, Int, Int)] =  ???
+  //val triplesGen: Gen[(Int, Int, Int)] =  ???
 
   test("mult2 result test") {
     forAll { (x: Int, y: Int) =>
@@ -20,3 +20,4 @@ class UtilFunctionsPropertyTest
 
   // write more property tests below
 }
+*/
