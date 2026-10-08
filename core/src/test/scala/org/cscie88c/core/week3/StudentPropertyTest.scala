@@ -1,4 +1,4 @@
-package org.cscie88c.core.week3
+/*package org.cscie88c.core.week3
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
@@ -9,7 +9,7 @@ class StudentPropertyTest
        with Matchers
        with ScalaCheckPropertyChecks {
 
-  val studentGen: Gen[Student] = ???
+  //val studentGen: Gen[Student] = ???
 
   // complete the student list generator below if attempting bonus problem
   // val studentListGen: Gen[List[Student]] = ???
@@ -18,3 +18,4 @@ class StudentPropertyTest
     // write your property test below
   }
 }
+*/
